@@ -1,0 +1,17 @@
+{
+  "name": "servicedesk-pro",
+  "version": "1.0.0",
+  "description": "AI-Enabled IT Helpdesk & Asset Management - Full-Stack ITSM Application",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
