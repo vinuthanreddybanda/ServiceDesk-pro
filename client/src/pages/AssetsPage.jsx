@@ -4,7 +4,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Plus, RefreshCw, ArrowLeft, ArrowRight } from 'lucide-react';
-import { assetAPI, vendorAPI, userAPI } from '../api/endpoints.js';
+import { assetAPI, userAPI } from '../api/endpoints.js';
 import { Button } from '../components/ui/Button.jsx';
 import { Input, Select } from '../components/ui/Input.jsx';
 import { Modal } from '../components/ui/Modal.jsx';

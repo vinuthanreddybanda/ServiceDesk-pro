@@ -43,6 +43,14 @@ export const STATUS_META = {
   closed:      { label: 'Closed',      color: 'bg-slate-600/20 text-slate-400 border-slate-600/20' },
   escalated:   { label: 'Escalated',   color: 'bg-danger/10 text-danger border-danger/20' },
 };
+export const TICKET_STATUS_OPTIONS = [
+  { value: 'open', label: 'Open' },
+  { value: 'in_progress', label: 'In Progress' },
+  { value: 'pending', label: 'Pending' },
+  { value: 'resolved', label: 'Resolved' },
+  { value: 'closed', label: 'Closed' },
+  { value: 'escalated', label: 'Escalated' },
+];
 
 export const PRIORITY_META = {
   Critical: { color: 'bg-danger/10 text-danger border-danger/20',       dot: 'bg-danger' },
@@ -58,6 +66,13 @@ export const LIFECYCLE_META = {
   replaced:  { label: 'Replaced',   color: 'bg-slate-600/20 text-slate-400 border-slate-600/20' },
   retired:   { label: 'Retired',    color: 'bg-danger/10 text-danger border-danger/20' },
 };
+export const ASSET_TRANSITIONS = {
+  procured: ['assigned', 'retired'],
+  assigned: ['in_repair', 'replaced', 'retired'],
+  in_repair: ['assigned', 'replaced', 'retired'],
+  replaced: ['assigned', 'retired'],
+  retired: [],
+};
 
 export const ROLES_META = {
   admin:         { label: 'Admin',         color: 'bg-danger/10 text-danger' },
@@ -66,6 +81,7 @@ export const ROLES_META = {
   employee:      { label: 'Employee',      color: 'bg-success/10 text-success' },
   asset_manager: { label: 'Asset Manager', color: 'bg-warning/10 text-warning' },
 };
+
 
 // Truncate string
 export const truncate = (str, n = 60) =>
